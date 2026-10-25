@@ -10,6 +10,7 @@
 - [x] Public repository published: https://github.com/veekeancodemaipen/traceclimate
 - [ ] A 3–5 minute video recorded, uploaded, and accessible to judges
 - [ ] Team/eligibility and story reviewed by participant
+- [x] Devpost draft text saved: name, pitch, story, nine technology tags, repository URL
 - [ ] Devpost fields completed and final submission made
 
 Deadline shown by Devpost: October 25, 2026, 17:00 UTC+03:00 = **21:00 Asia/Bangkok**.
