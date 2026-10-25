@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {analyze} from '../server/analysis.js';
+const values=[29,29.5,30,30.5,29.4,28.9,29.7,46];
+const csv=values=>'timestamp,temperature_c\n'+values.map((v,i)=>`2026-10-20T${String(i).padStart(2,'0')}:00:00Z,${v}`).join('\n');
+test('flags a spike and preserves all observations',()=>{const r=analyze(csv(values));assert.equal(r.report.flagged,1);assert.equal(r.observations.length,8);assert.equal(r.observations[7].flagged,true)});
+test('normalized fingerprint survives formatting and row order',()=>{const text=csv(values);const [head,...rows]=text.split('\n');assert.equal(analyze(text).datasetHash,analyze(head+'\n'+rows.reverse().join('\r\n')).datasetHash)});
+test('changed reading changes evidence hash',()=>{assert.notEqual(analyze(csv(values)).datasetHash,analyze(csv([...values.slice(0,7),45])).datasetHash)});
+test('rejects duplicate dates, blank values and missing timezone',()=>{assert.throws(()=>analyze(csv(values).replace('T01:','T00:')),/duplicate/);assert.throws(()=>analyze(csv(values).replace(',46',',')),/number/);assert.throws(()=>analyze(csv(values).replace('00:00:00Z','00:00:00')),/timezone/)});
+test('flat data produces finite zero scores',()=>{const r=analyze(csv(Array(8).fill(30)));assert.equal(r.report.flagged,0);assert.ok(r.observations.every(x=>x.score===0))});
+test('bounds malformed and oversized input',()=>{assert.throws(()=>analyze('timestamp,temperature_c\n'),/8–5/);assert.throws(()=>analyze('x'.repeat(1000001)),/1 MB/);assert.throws(()=>analyze(csv([...values.slice(0,7),101])),/range/)});
