@@ -9,11 +9,11 @@
 - [x] Source ZIP packaged and verified under 35 MB (about 6 MB; 27 files)
 - [x] Public repository published: https://github.com/veekeancodemaipen/traceclimate
 - [x] Unlisted demo published: https://youtu.be/kHMqFACu24c
-- [ ] Team/eligibility and story reviewed by participant
+- [x] Participant explicitly approved the final Rules and Terms agreement and submission
 - [x] Devpost draft text saved: name, pitch, story, nine technology tags, repository URL
-- [ ] Devpost fields completed and final submission made
+- [x] Devpost fields completed and final submission confirmed: https://devpost.com/software/traceclimate-hj7x4n
 
-Deadline shown by Devpost: October 25, 2026, 17:00 UTC+03:00 = **21:00 Asia/Bangkok**.
+Submission confirmed on October 25, 2026. Devpost displays the current edit deadline on the project page.
 
 The overview's eligibility summary says “Students only,” while the rules page lists broader categories. Verify your eligibility with the organizer if this affects you; this project does not assert eligibility on your behalf.
 
