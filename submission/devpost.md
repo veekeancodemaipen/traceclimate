@@ -44,7 +44,7 @@ Public repository URL: https://github.com/veekeancodemaipen/traceclimate
 Local prototype: http://127.0.0.1:4173 (local only; not a public Devpost demo link).
 
 ## Video demo link
-`TraceClimate-demo.mp4` is a 4 minute 31 second narrated walkthrough of captured working-app states, with synthesized narration. It is a local video draft, not yet a hosted video URL. Review it before uploading, or use the accompanying script to record your own live walkthrough.
+`TraceClimate-demo.mp4` is a 4 minute 31 second narrated walkthrough of captured working-app states, with synthesized narration. Hosted unlisted demo: https://youtu.be/kHMqFACu24c (YouTube displays a rounded duration of 4:32).
 
 ## Upload a File
 Use `TraceClimate-submission.zip` after the final packaging step. It contains source, documentation, example data, and screenshots, excluding installed dependencies.

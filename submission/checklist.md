@@ -8,7 +8,7 @@
 - [x] 4:31 narrated walkthrough video draft prepared (captured app states, synthesized voice)
 - [x] Source ZIP packaged and verified under 35 MB (about 6 MB; 27 files)
 - [x] Public repository published: https://github.com/veekeancodemaipen/traceclimate
-- [ ] A 3–5 minute video recorded, uploaded, and accessible to judges
+- [x] Unlisted demo published: https://youtu.be/kHMqFACu24c
 - [ ] Team/eligibility and story reviewed by participant
 - [x] Devpost draft text saved: name, pitch, story, nine technology tags, repository URL
 - [ ] Devpost fields completed and final submission made
